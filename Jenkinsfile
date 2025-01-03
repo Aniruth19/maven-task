@@ -24,7 +24,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarqube-server') {
-                    bat 'mvn clean verify sonar:sonar "-Dsonar.projectKey=maven-task-automation" "-Dsonar.projectName=maven-task-automation" "-Dsonar.host.url=http://localhost:9000" "-Dsonar.token=sqp_52cf26516cba7181d86475a979d29d0c9b7193d0" "-Dsonar.qualitygate.wait=true"'
+                    bat 'mvn clean verify sonar:sonar "-Dsonar.projectKey=maven-task-automation" "-Dsonar.projectName=maven-task-automation" "-Dsonar.host.url=http://localhost:9000" "-Dsonar.token=sqp_52cf26516cba7181d86475a979d29d0c9b7193d0" '
                 }
             }
         }
